@@ -1,3 +1,4 @@
+const body = document.querySelector("body");
 const increase = document.querySelector(".increase");
 const decrease = document.querySelector(".decrease");
 const counter = document.querySelector(".counter");
@@ -6,6 +7,8 @@ const number = document.querySelector("#number");
 const btn = document.querySelector("#btn");
 
 let count = 0;
+
+const maxWidth = window.matchMedia("(max-width: 500px)");
 
 const fadeOut = function () {
   setTimeout(() => {
@@ -31,11 +34,18 @@ decrease.addEventListener("click", function () {
   counter.textContent = count;
 });
 
+//////////////
+
 btn.addEventListener("click", function () {
   let x = Number(number.value);
-  if (x < 0) {
-    msg.style.opacity = 100;
-    fadeOut();
+  if (maxWidth.matches) {
+    if (x > 9999) {
+      msg.style.opacity = 100;
+      msg.textContent = "Can't go above 9999";
+      fadeOut();
+    } else {
+      counter.textContent = count = count + x;
+    }
   } else if (x > 9999999) {
     msg.style.opacity = 100;
     msg.textContent = "Can't go above 9999999";
@@ -44,6 +54,8 @@ btn.addEventListener("click", function () {
     counter.textContent = count = count + x;
   }
 });
+
+/////////////
 
 increase.addEventListener("mouseover", function () {
   counter.style.border = "1px solid #f15223";
