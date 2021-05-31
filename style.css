@@ -101,20 +101,3 @@ input[type="number"] {
   margin: 0px 10px 5px 0px;
 }
 
-@media (max-width: 500px) {
-  .increase button,
-  .decrease button,
-  .counter {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
-    width: 50px;
-    height: 20px;
-    padding: 20px;
-    margin: 20px;
-    transition: 0.5s;
-    border-radius: 2px;
-    border: none;
-  }
-}
