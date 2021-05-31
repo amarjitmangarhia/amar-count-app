@@ -1,0 +1,120 @@
+body {
+  font-family: monospace;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.c-for-counter {
+  height: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.increase button,
+.decrease button,
+.counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  width: 100px;
+  height: 50px;
+  padding: 20px;
+  margin: 20px;
+  transition: 0.5s;
+  border-radius: 2px;
+  border: none;
+}
+
+.increase button,
+.decrease button {
+  border: 1px solid #f15223;
+  color: black;
+
+  /* box-shadow: 5px 5px 5px #2d9e64; */
+}
+
+.increase button:hover,
+.decrease button:hover {
+  border: 3px solid #2d9e64;
+  transition: 0.1s;
+}
+
+.counter {
+  background: #dddada;
+  color: rgb(0, 0, 0);
+}
+
+.counter {
+  height: 11px;
+  border: 1px solid #2d9e64;
+  /* width: auto; */
+}
+
+input[type="number"] {
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+#btn {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#btn button {
+  padding: 5px;
+  width: 50px;
+  border: none;
+  border-radius: 10px;
+  /* background: linear-gradient(
+    45deg,
+    rgb(26, 25, 25),
+    rgb(78, 182, 78),
+    rgb(12, 12, 226)
+  ); */
+  background: #ff7d7d;
+}
+
+#btn button:hover {
+  box-shadow: 2px 2px 5px;
+  transition: 0.3s;
+}
+
+.msg {
+  font-size: 20px;
+  opacity: 0%;
+  transition: 0.5s;
+  margin-top: 10px;
+}
+
+.number {
+  border: none;
+  margin: 0px 10px 5px 0px;
+}
+
+@media (max-width: 500px) {
+  .increase button,
+  .decrease button,
+  .counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    width: 50px;
+    height: 20px;
+    padding: 20px;
+    margin: 20px;
+    transition: 0.5s;
+    border-radius: 2px;
+    border: none;
+  }
+}
